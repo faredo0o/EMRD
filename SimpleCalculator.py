@@ -13,10 +13,15 @@ class SimpleCalculator:
             raise ValueError("Cannot divide by zero!")
         return a / b
 
-# Example usage
-if __name__ == "__main__":
-    calculator = SimpleCalculator()
-    print("Addition: ", calculator.add(10, 5))
-    print("Subtraction: ", calculator.subtract(10, 5))
-    print("Multiplication: ", calculator.multiply(10, 5))
-    print("Division: ", calculator.divide(10, 5))
+    def power(self, base, exponent):
+        return base ** exponent
+
+    def sqrt(self, number):
+        if number < 0:
+            raise ValueError("Cannot take the square root of a negative number!")
+        return number ** 0.5
+
+    def modulo(self, a, b):
+        if b == 0:
+            raise ValueError("Cannot modulo by zero!")
+        return a % b
